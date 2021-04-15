@@ -1,19 +1,22 @@
 {
-  "root": true,
+  "env": {
+    "browser": false,
+    "es6": true,
+    "node": true
+  },
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "project": "./tsconfig.json"
+    "project": "./tsconfig.json",
+    "sourceType": "module"
   },
   "plugins": [
     "@typescript-eslint"
   ],
   "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended",
-    "plugin:@typescript-eslint/recommended-requiring-type-checking",
     "airbnb-typescript/base"
   ],
-  "rules": {
-    "no-console": 0,
-    "import/prefer-default-export": 0
-  }
+  "rules": {}
 }
